@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>关于我们 · 鲸湾探索</title>
+<meta name="description" content="鲸湾探索 — 王海宁 + 姚雪霏共同创立。前中国南极科考队员 + 牛津大学动物生态学博士，专注极地深度体验。">
+
+<meta property="og:title" content="关于我们 · 鲸湾探索">
+<meta property="og:description" content="我们是极地行程的策划者，更是这片雪原与冰海的长期居民。">
+<meta property="og:image" content="https://whalebay.world/assets/about/safety-ship.jpg">
+<meta property="og:url" content="https://whalebay.world/about/">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@300;400;500;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+  html { font-size:18px; scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+  body { font-family:'Noto Sans SC','PingFang SC',sans-serif; color:#1a1a2e; background:#faf8f5; line-height:1.9; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; text-decoration:none; }
+
+  :root {
+    --bg-light:#faf8f5;
+    --bg-card:#f0ece4;
+    --bg-deep:#0a0a12;
+    --gold:#8a7344;
+    --gold-light:#c8a86e;
+    --text-dark:#1a1a2e;
+    --text-body:#3a3a4e;
+    --text-muted:#7a7a8a;
+    --divider:rgba(138,115,68,0.2);
+  }
+
+  /* ===== SHARED TOP BAR ===== */
+  .wb-topbar {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    height:56px; display:flex; align-items:center; justify-content:space-between;
+    padding:0 24px;
+    background:rgba(250,248,245,0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(138,115,68,0.15);
+  }
+  .wb-topbar a { color:var(--text-dark); font-size:0.78rem; letter-spacing:0.12em; }
+  .wb-brand { font-family:'Cinzel',serif; font-weight:500; }
+  .wb-brand .zh { font-family:'Noto Serif SC',serif; margin-right:0.5em; letter-spacing:0.08em; }
+  .wb-back { opacity:0.7; transition:opacity .2s; }
+  .wb-back:hover { opacity:1; }
+  body { padding-top:56px; }
+  @media (max-width:600px) {
+    .wb-topbar { height:48px; padding:0 16px; }
+    .wb-topbar a { font-size:0.7rem; }
+    body { padding-top:48px; }
+  }
+
+  /* ===== ABOUT HERO ===== */
+  .about-hero {
+    padding:120px 24px 80px; text-align:center;
+    background:linear-gradient(180deg, var(--bg-light) 0%, var(--bg-card) 100%);
+  }
+  .about-hero .label { font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.4em; color:var(--gold); margin-bottom:16px; }
+  .about-hero h1 { font-family:'Noto Serif SC',serif; font-size:clamp(2.5rem, 6vw, 4rem); font-weight:300; letter-spacing:0.15em; color:var(--text-dark); }
+
+  /* ===== SECTION COMMON ===== */
+  .section { padding:96px 24px; }
+  .section .container { max-width:1100px; margin:0 auto; }
+  .section .label { font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.35em; color:var(--gold); margin-bottom:12px; }
+  .section h2 { font-family:'Noto Serif SC',serif; font-size:2rem; font-weight:400; color:var(--text-dark); letter-spacing:0.1em; margin-bottom:40px; }
+
+  /* ===== PHILOSOPHY ===== */
+  .philosophy {
+    background:var(--bg-light); position:relative;
+  }
+  .philosophy .text {
+    max-width:680px; margin:0 auto;
+    font-family:'Noto Serif SC',serif; font-size:1.15rem; line-height:2.1; color:var(--text-body);
+  }
+  .philosophy .text p { margin-bottom:24px; }
+  .philosophy .text .em { color:var(--gold); font-weight:500; }
+  .philosophy .imagery { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:64px; }
+  .philosophy .imagery img { width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:4px; }
+  @media (max-width:700px) { .philosophy .imagery { grid-template-columns:1fr; } }
+
+  /* ===== FOUNDERS ===== */
+  .founders { background:var(--bg-card); }
+  .founder { display:grid; grid-template-columns:1fr 1.4fr; gap:48px; align-items:start; margin-bottom:80px; }
+  .founder:last-child { margin-bottom:0; }
+  .founder.reverse { grid-template-columns:1.4fr 1fr; }
+  .founder.reverse .portrait { order:2; }
+  .founder.reverse .bio { order:1; }
+  .founder .portrait img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:4px; }
+  .founder .bio .role { font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.3em; color:var(--gold); margin-bottom:12px; }
+  .founder .bio h3 { font-family:'Noto Serif SC',serif; font-size:2rem; font-weight:400; letter-spacing:0.2em; color:var(--text-dark); margin-bottom:8px; }
+  .founder .bio .en-name { font-family:'Cinzel',serif; font-size:0.95rem; letter-spacing:0.25em; color:var(--text-muted); margin-bottom:32px; }
+  .founder .bio ul { list-style:none; }
+  .founder .bio li { padding:8px 0 8px 24px; position:relative; color:var(--text-body); font-size:0.95rem; line-height:1.8; border-bottom:1px solid var(--divider); }
+  .founder .bio li:last-child { border-bottom:none; }
+  .founder .bio li::before { content:"·"; position:absolute; left:8px; top:8px; color:var(--gold); font-size:1.2rem; }
+  @media (max-width:800px) {
+    .founder, .founder.reverse { grid-template-columns:1fr; gap:24px; }
+    .founder.reverse .portrait { order:0; }
+    .founder.reverse .bio { order:1; }
+  }
+
+  /* ===== SAFETY ===== */
+  .safety { background:var(--bg-deep); color:#e8e8ec; }
+  .safety .label { color:var(--gold-light); }
+  .safety h2 { color:#fff; }
+  .safety .intro {
+    max-width:760px; margin:0 auto 56px;
+    font-family:'Noto Serif SC',serif; font-size:1.1rem; line-height:1.9; color:#d8d8e0;
+  }
+  .safety .intro .em { color:var(--gold-light); }
+  .safety .pillars { display:grid; grid-template-columns:repeat(2,1fr); gap:32px; max-width:920px; margin:0 auto; }
+  .safety .pillar { padding:24px; border-left:2px solid var(--gold); background:rgba(255,255,255,0.02); }
+  .safety .pillar h4 { font-family:'Noto Serif SC',serif; font-size:1.15rem; font-weight:500; color:var(--gold-light); margin-bottom:12px; letter-spacing:0.08em; }
+  .safety .pillar p { font-size:0.9rem; color:#b8b8c0; line-height:1.8; }
+  @media (max-width:700px) { .safety .pillars { grid-template-columns:1fr; } }
+
+  /* ===== BOOKS ===== */
+  .books { background:var(--bg-light); }
+  .books .author-group { margin-bottom:64px; }
+  .books .author-group:last-child { margin-bottom:0; }
+  .books .author-name { font-family:'Noto Serif SC',serif; font-size:1.3rem; font-weight:500; letter-spacing:0.15em; margin-bottom:8px; color:var(--text-dark); }
+  .books .author-en { font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.3em; color:var(--gold); margin-bottom:24px; }
+  .books .book-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .books .book { text-align:center; }
+  .books .book img { aspect-ratio:2/3; object-fit:cover; width:100%; border-radius:2px; box-shadow:0 4px 16px rgba(0,0,0,0.1); margin-bottom:12px; }
+  .books .book .title { font-family:'Noto Serif SC',serif; font-size:0.9rem; line-height:1.5; color:var(--text-dark); }
+  .books .book .subtitle { font-size:0.75rem; color:var(--text-muted); margin-top:4px; line-height:1.5; }
+  @media (max-width:700px) { .books .book-grid { grid-template-columns:repeat(2,1fr); } }
+
+  /* ===== FOOTER ===== */
+  .wb-footer {
+    background:#070710; color:#8a8a9a; padding:48px 24px 32px;
+    text-align:center; font-size:0.85rem; letter-spacing:0.05em;
+  }
+  .wb-footer .qr { width:120px; margin:0 auto 16px; border:8px solid #fff; border-radius:4px; }
+  .wb-footer .email { color:var(--gold-light); margin:8px 0; font-family:'Cinzel',serif; }
+  .wb-footer .copy { font-size:0.7rem; opacity:0.5; margin-top:24px; letter-spacing:0.1em; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="wb-topbar">
+  <a href="https://whalebay.world" class="wb-brand"><span class="zh">鲸湾探索</span>WHALEBAY EXPEDITIONS</a>
+  <a href="https://whalebay.world" class="wb-back">← 返回首页</a>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="label">WHO WE ARE</div>
+  <h1>我们是谁</h1>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section philosophy">
+  <div class="container">
+    <div class="label">OUR PHILOSOPHY</div>
+    <h2>我们的理念</h2>
+    <div class="text">
+      <p>我们是极地行程的策划者，更是这片雪原与冰海的<span class="em">长期居民</span>。</p>
+      <p>我们相信，真正的极地体验，不是为了打卡坐标，而是一场<span class="em">真实的相遇</span> —— 唤醒知觉，去看见、听见、触摸、感受，去探索未知的世界，也探索"自己"。</p>
+      <p>无论是亲手升帆、十人同船协力渡过浮冰，还是穿上干衣潜入零下的冰海，抑或耗尽体能徒步走向地理意义上的极点 —— 关键是你能否听见自己的心跳，与这片寂静<span class="em">共振</span>。</p>
+      <p>因此 —— 我们拒绝喧嚣，拒绝表演式探险，更拒绝走马观花的旅游。只做小规模、低干扰、亲手勘线、亲自带队的行程，带你真正"<span class="em">在场</span>"而非"路过"。</p>
+    </div>
+    <div class="imagery">
+      <img src="../assets/about/philosophy-icebergs.jpg" alt="冰海" />
+      <img src="../assets/about/philosophy-hikers.jpg" alt="徒步冰川" />
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="section founders">
+  <div class="container">
+    <div class="label">FOUNDERS</div>
+    <h2>联合创始人</h2>
+
+    <div class="founder">
+      <div class="portrait"><img src="../assets/about/founder-wang.jpg" alt="王海宁" /></div>
+      <div class="bio">
+        <div class="role">前中国南极科考队员</div>
+        <h3>王海宁</h3>
+        <div class="en-name">HAINING WANG</div>
+        <ul>
+          <li>2004–2006 年驻守南极中山站，从事高空大气物理、极光与海冰研究，获国家海洋局"优秀南极考察队员"表彰。</li>
+          <li>2016 年起，任多家国际邮轮及营地公司极地向导、探险队长，Sylvia Earle 极地气候变化项目特邀探险队员。</li>
+          <li>中国极地向导联盟（CPGA）发起人。</li>
+          <li>极地图书策划人暨译者，出版《冰之传奇》《西北航道》《极星号漂流北极》等。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="founder reverse">
+      <div class="portrait"><img src="../assets/about/founder-yao.jpg" alt="姚雪霏" /></div>
+      <div class="bio">
+        <div class="role">牛津大学动物生态学博士</div>
+        <h3>姚雪霏</h3>
+        <div class="en-name">XUEFEI YAO</div>
+        <ul>
+          <li>20余年野外科研，足迹遍及藏北、珠峰、帕米尔、藏东南、祁连山、阿尔金山、昆仑山等地；曾常驻北极圈三年。</li>
+          <li>截至2017年，累计完成50余次南极探险行程，担任野生动物向导、户外讲师及急救员。</li>
+          <li>活跃于国内外野生动物与环境保护科研工作。</li>
+          <li>科普作家，长期供稿《中国国家地理》《博物》《果壳》《孤独星球》；译有《植物大发现》《荒野守望》《寂静的石头》《聆听冰川》等。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section class="section safety">
+  <div class="container">
+    <div class="label">ABOUT SAFETY</div>
+    <h2>关于安全</h2>
+    <div class="intro">
+      我们选择<span class="em">复古大帆船</span>作为极地探索的核心载体 —— 不仅因其独特美学，更因其在极地环境中本质更高的<span class="em">安全性</span>。
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <h4>船型优势 · 更适合峡湾航行</h4>
+        <p>极地峡湾冰山密布、水道狭窄、风浪平静。大帆船吃水浅、转向灵活，能安全深入大型邮轮无法抵达的冰缘秘境。</p>
+      </div>
+      <div class="pillar">
+        <h4>科技赋能 · 复古非落后</h4>
+        <p>"复古"仅指外观。船上配备与现代探险船同级的安全系统：星链卫星通信 + 全天候无线电救援、导航雷达 + 电子海图 + AIS 船舶识别、海水淡化 + 自动充气救生筏 + AED 急救设备。</p>
+      </div>
+      <div class="pillar">
+        <h4>安全可控 · 事故率显著更低</h4>
+        <p>近年百人以上邮轮在格陵兰、南极频发搁浅、机械故障、客舱破损。同期极地小帆船（载客 ≤ 10 人）几乎零搁浅、零重大救援、零伤亡。人数少、团队精，应急响应更高效。</p>
+      </div>
+      <div class="pillar">
+        <h4>专业应急 · 全员受训</h4>
+        <p>全体船员与探险向导均接受野外急救与极地救援培训，船上配备基础医疗及 AED 设备，可在第一时间处理突发状况，并通过卫星系统联动后方支援。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section class="section books">
+  <div class="container">
+    <div class="label">TEAM WORK</div>
+    <h2>团队作品</h2>
+
+    <div class="author-group">
+      <div class="author-name">王海宁</div>
+      <div class="author-en">HAINING WANG</div>
+      <div class="book-grid">
+        <div class="book">
+          <img src="../assets/about/book-ice-of-storied.jpg" alt="冰之传奇" />
+          <div class="title">冰之传奇</div>
+          <div class="subtitle">人类南极半岛探险史 · 策划</div>
+        </div>
+        <div class="book">
+          <img src="../assets/about/book-northwest-passage.jpg" alt="寻找西北航道" />
+          <div class="title">寻找西北航道</div>
+          <div class="subtitle">一部不为人知的北极探险史 · 策划/审订</div>
+        </div>
+        <div class="book">
+          <img src="../assets/about/book-polarstern.jpg" alt="极星号漂流北极" />
+          <div class="title">"极星"号！漂流北极</div>
+          <div class="subtitle">史上规模最大的北极科考行动 · 策划/审订</div>
+        </div>
+        <div class="book"><!-- spacer to keep 4-col grid balanced --></div>
+      </div>
+    </div>
+
+    <div class="author-group">
+      <div class="author-name">姚雪霏</div>
+      <div class="author-en">XUEFEI YAO</div>
+      <div class="book-grid">
+        <div class="book">
+          <img src="../assets/about/book-ice-rivers.jpg" alt="聆听冰川" />
+          <div class="title">聆听冰川</div>
+          <div class="subtitle">冒险、荒野和生命的故事 · 译者</div>
+        </div>
+        <div class="book">
+          <img src="../assets/about/book-stones-silence.jpg" alt="寂静的石头" />
+          <div class="title">寂静的石头</div>
+          <div class="subtitle">喜马拉雅地区的科考随笔 · 译者</div>
+        </div>
+        <div class="book">
+          <img src="../assets/about/book-botanical-art.jpg" alt="植物大发现" />
+          <div class="title">植物大发现</div>
+          <div class="subtitle">黄金时代的图谱艺术 · 译者</div>
+        </div>
+        <div class="book">
+          <img src="../assets/about/book-visions-wildness.jpg" alt="荒野守望" />
+          <div class="title">荒野守望</div>
+          <div class="subtitle">野生世界观察笔记 · 译者</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wb-footer">
+  <img class="qr" src="../assets/wechat-qr.png" alt="WeChat QR" />
+  <div>微信咨询 · WeChat</div>
+  <div class="email">whalebayexpedition@gmail.com</div>
+  <div class="copy">© 2026 鲸湾探索 · WHALEBAY EXPEDITIONS</div>
+</footer>
+
+</body>
+</html>

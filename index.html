@@ -250,10 +250,42 @@
   /* ===== BESPOKE CTA ===== */
   .bespoke-cta { background:var(--bg-paper); padding:64px 24px 96px; text-align:center; }
   .bespoke-cta .inner {
+    position: relative;
     max-width:640px; margin:0 auto; padding:56px 32px;
-    border:1px solid var(--divider); border-radius:4px;
-    background:var(--bg-paper-alt);
+    background-color: #f4ecd8;
+    background-image:
+      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.55), transparent 60%),
+      radial-gradient(ellipse at 80% 85%, rgba(0,0,0,0.05), transparent 65%);
+    color: #3d352b;
+    border: none;
+    border-radius: 0;
+    box-shadow:
+      0 14px 36px rgba(0,0,0,0.18),
+      0 3px 8px rgba(0,0,0,0.08);
   }
+  .bespoke-cta .inner::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 44px; height: 44px;
+    background: linear-gradient(225deg, #b8a774 0%, #c8b88c 30%, #d8c89c 60%, #e6d9b6 100%);
+    clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.18);
+  }
+  .bespoke-cta .inner::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 44px; height: 44px;
+    background: linear-gradient(45deg, transparent 47%, rgba(0,0,0,0.18) 50%, transparent 53%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .bespoke-cta .inner .label { color: #8a6d3d; }
+  .bespoke-cta .inner h2 { color: #3d352b; }
+  .bespoke-cta .inner p { color: #5a5246; }
+  .bespoke-cta .inner .email-btn { border-color: #8a6d3d; color: #5a4628; }
+  .bespoke-cta .inner .email-btn:hover { background: #8a6d3d; color: #f4ecd8; }
   .bespoke-cta .label {
     font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:0.4em;
     color:var(--bronze); margin-bottom:14px;
@@ -353,7 +385,6 @@
     <a class="topbar-link" href="/about/">关于 · ABOUT</a>
   </div>
   <div class="hero-titleband">
-    <div class="brand-mark">POLAR EXPEDITIONS · EST. 2025</div>
     <h1>鲸湾<span class="sep"></span>探索</h1>
     <div class="tagline"><span class="em">在场</span> · 而非 · <span class="muted">路过</span></div>
   </div>
@@ -364,7 +395,7 @@
 <section class="products">
   <div class="container">
     <div class="section-label">OUR EXPEDITIONS</div>
-    <div class="section-title">探索</div>
+    
     <div class="grid">
 
       <a class="product-box" href="https://arctic.whalebay.world/ilulissat">
@@ -434,7 +465,7 @@
         </div>
         <div class="product-caption">
           <div class="en-name">PENINSULA</div>
-          <div class="zh-name">南极之心</div>
+          <div class="zh-name">纵帆 · 南极之心</div>
           <div class="teaser">经典南极半岛 · 巡游、登陆 · 复古大帆船</div>
         </div>
       </a>
@@ -449,8 +480,7 @@
             <span class="dot">·</span>
             <span class="latin">AUTUMN &amp; WINTER</span>
           </div>
-          <span class="soon-tag">敬请期待</span>
-        </div>
+          </div>
         <div class="product-caption">
           <div class="en-name">SOUTH POLE</div>
           <div class="zh-name">南极点 × 帝企鹅</div>
@@ -468,8 +498,7 @@
             <span class="dot">·</span>
             <span class="latin">AUTUMN</span>
           </div>
-          <span class="soon-tag">敬请期待</span>
-        </div>
+          </div>
         <div class="product-caption">
           <div class="en-name">CONTINENT</div>
           <div class="zh-name">南极内陆</div>

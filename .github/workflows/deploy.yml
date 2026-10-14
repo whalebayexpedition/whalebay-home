@@ -28,6 +28,8 @@ jobs:
             --exclude='DEPLOY-NOTES.md' \
             --exclude='README.md' \
             --exclude='docs/' \
+            --exclude='/about/' \
+            --exclude='/assets/about/' \
             --exclude='diary.txt' \
             --exclude='*.pdf' \
             --exclude='*.pptx' \
